@@ -1,0 +1,184 @@
+<div class="flex flex-col justify-center">
+    <div class="bg-slate-300 p-10">
+        <div
+          class="bg-cyan-200 border border-blue-800 custom-border flex justify-center m-5 p-2"
+        >
+          <div>
+            You can also <a routerLink="/login">Login</a> or <a routerLink="/">Register</a> First
+          </div>
+        </div>
+   <div class="flex justify-center">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="">
+      <div>
+        <mat-form-field appearance="outline" class="w-[667px]">
+          <mat-label>Listing Title</mat-label>
+          <input matInput formControlName="title" required />
+        </mat-form-field>
+      </div>
+      <div class="gt-xs:flex gt-xs:space-x-4">
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Condition</mat-label>
+            <!-- <input matInput formControlName="condition" required /> -->
+            <select matNativeControl required formControlName="condition">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </select>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Type</mat-label>
+            <!-- <input matInput formControlName="type" required /> -->
+            <select matNativeControl required formControlName="type">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </select>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Make</mat-label>
+            <!-- <input matInput formControlName="moke" required /> -->
+            <select matNativeControl required formControlName="moke">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="gt-xs:flex gt-xs:space-x-4">
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Model</mat-label>
+            <!-- <input matInput formControlName="model" required /> -->
+            <select matNativeControl required formControlName="model">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Price (USD)</mat-label>
+            <input matInput formControlName="price" required />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Year</mat-label>
+            <input matInput formControlName="year" required />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="gt-xs:flex gt-xs:space-x-4">
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Drive Type</mat-label>
+            <!-- <input matInput formControlName="driveType" required /> -->
+            <select matNativeControl required formControlName="driveType">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Transmission</mat-label>
+            <!-- <input matInput formControlName="transmission" required /> -->
+            <select matNativeControl required formControlName="transmission">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Fuel Type</mat-label>
+            <!-- <input matInput formControlName="fuelType" required /> -->
+            <select matNativeControl required formControlName="fuelType">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="gt-xs:flex gt-xs:space-x-4">
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Mileage</mat-label>
+            <input matInput formControlName="mileage" required />
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Engine Size</mat-label>
+            <input matInput formControlName="engineSize" required />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Cylinders</mat-label>
+            <!-- <input matInput formControlName="cylinders" required /> -->
+            <select matNativeControl required formControlName="cylinders">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="gt-xs:flex gt-xs:space-x-4">
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Color</mat-label>
+            <!-- <input matInput formControlName="color" required /> -->
+            <select matNativeControl required formControlName="color">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Doors</mat-label>
+            <!-- <input matInput formControlName="doors" required /> -->
+            <select matNativeControl required formControlName="doors">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </select>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>VIN</mat-label>
+            <input matInput formControlName="vin" required />
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description" required></textarea>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!registerForm.valid"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</div>
